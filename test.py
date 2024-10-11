@@ -1,2 +1,2 @@
 def path():
-    pass
+    print("nothing")
