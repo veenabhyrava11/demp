@@ -1,4 +1,4 @@
-name: Hello World Workflow
+name: Sync Main and Update Databricks Repo
 
 on:
   push:
@@ -6,9 +6,20 @@ on:
       - main
 
 jobs:
-  hello-world:
+  sync-and-databricks-update:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Hello World
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+
+      - name: Configure Databricks CLI
         run: echo 'Hello, World!'
+        
+
+      - name: Sync code to Databricks Repo
+        run: echo 'Hello, World!'
+       
+
+        
